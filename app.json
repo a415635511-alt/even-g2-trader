@@ -1,0 +1,16 @@
+{
+  "package_id": "com.eudatalabs.g2desk",
+  "edition": "202601",
+  "name": "G2 GlanceDesk",
+  "version": "1.0.0",
+  "min_app_version": "2.0.0",
+  "min_sdk_version": "0.0.10",
+  "entrypoint": "index.html",
+  "permissions": [
+    {
+      "name": "network",
+      "desc": "Read live Hyperliquid perp / Polymarket odds and execute paper or testnet orders via the local G2 GlanceDesk backend"
+    }
+  ],
+  "supported_languages": ["en"]
+}

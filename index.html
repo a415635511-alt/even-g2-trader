@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G2 GlanceDesk — Even G2 Trading &amp; Prediction Copilot</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; padding: 16px;
+        background: #080d0a; color: #b7f7c6;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .wrap { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+      .eyewear {
+        border: 1px solid #1f4d2e; background: #050a07; border-radius: 10px;
+        padding: 14px 16px; min-height: 170px;
+        box-shadow: 0 0 24px rgba(68, 255, 130, 0.08);
+      }
+      .eyewear pre {
+        margin: 0; white-space: pre-wrap; font-size: 15px; line-height: 1.45; color: #7dff9b;
+      }
+      .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      button {
+        background: #102418; color: #8dffaa; border: 1px solid #265938;
+        border-radius: 6px; padding: 7px 12px; cursor: pointer; font: inherit; font-size: 13px;
+      }
+      button:hover { background: #173623; }
+      button.primary { background: #1a4d2c; border-color: #46c473; color: #eaffef; }
+      button.danger { background: #361515; border-color: #b84a4a; color: #ffd4d4; }
+      input {
+        flex: 1; min-width: 220px; background: #0b1610; color: #d8ffe2;
+        border: 1px solid #245235; border-radius: 6px; padding: 7px 10px; font: inherit; font-size: 13px;
+      }
+      .meta { font-size: 12px; color: #6c9e7a; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+      .log {
+        font-size: 12px; color: #7da889; border-top: 1px solid #183622; padding-top: 8px;
+        max-height: 140px; overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="meta">
+        <span>G2 GlanceDesk · 576×288 Monochrome Preview + Even Hub Bridge</span>
+        <span id="status">Booting...</span>
+      </div>
+      <div class="eyewear"><pre id="screen">Loading live Hyperliquid &amp; Polymarket feeds...</pre></div>
+      <div class="bar">
+        <button id="btnScroll">Scroll (Switch View)</button>
+        <button id="btnTap" class="primary">Tap (Next / Confirm)</button>
+        <button id="btnDouble" class="danger">2×Tap (Back / Cancel)</button>
+        <button id="btnMic">Mic (PCM Voice)</button>
+      </div>
+      <div class="bar">
+        <input id="voiceInput" type="text" placeholder="Voice intent: e.g. 'buy 100 btc' · 'short 50 eth' · 'bet 25 yes' · 'close all'" />
+        <button id="btnSendVoice" class="primary">Draft From Voice</button>
+      </div>
+      <div id="log" class="log"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
